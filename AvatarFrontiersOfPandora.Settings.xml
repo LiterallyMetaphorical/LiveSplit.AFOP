@@ -1,0 +1,37 @@
+<!--Last updated 10-01-2024 (DD-MM-YYYY)-->
+<Settings>
+	<Setting Id="Quests" Label="Split When Completing a Quest" State="true">
+		<Setting Id="Q1" Label="1. Awakening" State="true"/>
+		<Setting Id="Q2" Label="2. Pandora" State="true"/>
+		<Setting Id="Q3" Label="3. Welcome To The Resistance" State="true"/>
+		<Setting Id="Q4" Label="4. Songs Of Our Ancestors" State="true"/>
+		<Setting Id="Q5" Label="5. Becoming" State="true"/>
+		<Setting Id="Q6" Label="6. The Aranahe Clan" State="true"/>
+		<Setting Id="Q7" Label="7. Eywa's Blessing" State="true"/>
+		<Setting Id="Q8" Label="8. The Missing Hunter" State="true"/>
+		<Setting Id="Q9" Label="9. A Queen's Vision (started and finished during The Eye of Eywa. Pointless split)" State="false"/>
+		<Setting Id="Q10" Label="10. The Eye Of Eywa" State="true"/>
+		<Setting Id="Q11" Label="11. Take Flight" State="true"/>
+		<Setting Id="Q12" Label="12. Those Who Guide Us" State="true"/>
+		<Setting Id="Q13" Label="13. Pushing Back (final quest in Aranahe quest line)" State="true"/>
+		<Setting Id="Q14" Label="14. The Wandering Clan" State="true"/>
+		<Setting Id="Q15" Label="15. Hunters Hunted" State="true"/>
+		<Setting Id="Q16" Label="16. The Lodge" State="true"/>
+		<Setting Id="Q17" Label="17. The Weeping Gorge" State="true"/>
+		<Setting Id="Q18" Label="18. Call To Battle" State="true"/>
+		<Setting Id="Q19" Label="19. Combined Forces (final quest in Zeswa quest line)" State="true"/>
+		<Setting Id="Q20" Label="20. A Victory Celebration" State="true"/>
+		<Setting Id="Q21" Label="21. Escape Plan" State="true"/>
+		<Setting Id="Q22" Label="22. Loss And Ruin" State="true"/>
+		<Setting Id="Q23" Label="23. The Hidden Clan" State="true"/>
+		<Setting Id="Q24" Label="24. Shadows Of The Past" State="true"/>
+		<Setting Id="Q25" Label="25. A New Plan" State="true"/>
+		<Setting Id="Q26" Label="26. Into The Fog (final quest in Kame'Tire quest line)" State="true"/>
+		<Setting Id="Q27" Label="27. Revelations (double split)" State="false"/>
+		<Setting Id="Q28" Label="28. Revelations" State="true"/>
+		<Setting Id="Q29" Label="29. A Distant Storm" State="true"/>
+		<Setting Id="Q30" Label="30. Rising Pressure" State="true"/>
+		<Setting Id="Q31" Label="31. A Hidden Weakness" State="true"/>
+		<Setting Id="Q32" Label="32. Last Strike" State="false"/>
+	</Setting>
+</Settings>
