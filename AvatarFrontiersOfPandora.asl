@@ -1,23 +1,31 @@
 // Created by Binslev, Credit to Meta and Diggity
-// Game version 1.02 Ubisoft Connect (Untested on Epic Games)
-// Last updated 23-01-2024 (DD-MM-YYYY)
+// Game version 1.03 Ubisoft Connect (Untested on Epic Games)
+// Last updated 18-03-2024 (DD-MM-YYYY) by Binslev
 
 state("afop")
 {
 // Load remover pointers. Double pointers as a failsafe. Value is 0 while loading, 1056964608 otherwise.
 
-    int loading1 : 0x97CA9A8;
-    int loading2 : 0x97CAA30;
+    int loading1 : 0x8F7BC38;
+    int loading2 : 0x8F7BC7C;
 
 // Autosplitter pointers for main quests. Value starts at 1 before completing "Awakening", +1 when you complete a main quest. 
 // Each game slot in the save file has a different pointer.
 // For future reference, the pointers should follow the pattern below. The only difference is a value of +8 in the 2nd to last offset.
 // Furthermore, the four addresses that are pointed to will always vary by a hex value of +588 from the last.
 
+    int q1 : 0x0877AE48, 0x298, 0xC0, 0x20, 0x338, 0x0, 0x528; // save slot 1
+    int q2 : 0x0877AE48, 0x298, 0xC0, 0x20, 0x338, 0x8, 0x528; // save slot 2
+    int q3 : 0x0877AE48, 0x298, 0xC0, 0x20, 0x338, 0x10, 0x528; // save slot 3
+    int q4 : 0x0877AE48, 0x298, 0xC0, 0x20, 0x338, 0x18, 0x528; // save slot 4
+
+    /*
+    Pointers from game v1.02, for reference
     int q1 : 0x08FD2FD8, 0x298, 0xC0, 0x20, 0x350, 0x528; // save slot 1
     int q2 : 0x08FD2FD8, 0x298, 0xC0, 0x20, 0x358, 0x528; // save slot 2
     int q3 : 0x08FD2FD8, 0x298, 0xC0, 0x20, 0x360, 0x528; // save slot 3
     int q4 : 0x08FD2FD8, 0x298, 0xC0, 0x20, 0x368, 0x528; // save slot 4
+    */
 }
 
 
@@ -35,20 +43,7 @@ startup
     {
     // Asks user to change to game time if LiveSplit is currently set to Real Time.
 
-		if (timer.CurrentTimingMethod == TimingMethod.RealTime)
-        {        
-            var timingMessage = MessageBox.Show 
-            ("This game uses Load Removed Time (Game Time) as the timing method.\n"+
-            "LiveSplit is currently set to compare against Real Time (RTA).\n"+
-            "Would you like to set the timing method to Game Time?",
-            "LiveSplit | Avatar: Frontiers of Pandora",
-            MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-
-        if (timingMessage == DialogResult.Yes)
-            {
-                timer.CurrentTimingMethod = TimingMethod.GameTime;
-            }
-        }
+        vars.Helper.AlertLoadless();
     }
 }
 
