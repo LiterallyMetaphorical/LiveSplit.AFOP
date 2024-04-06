@@ -1,6 +1,6 @@
-// Created by Binslev, Credit to Meta and Diggity
+// Created by Binslev, Credit to Meta, Diggity and Sarentig
 // Game version 1.03 Ubisoft Connect (Untested on Epic Games)
-// Last updated 18-03-2024 (DD-MM-YYYY) by Binslev
+// Last updated 26-03-2024 (DD-MM-YYYY) by Binslev
 
 state("afop")
 {
@@ -9,23 +9,14 @@ state("afop")
     int loading1 : 0x8F7BC38;
     int loading2 : 0x8F7BC7C;
 
-// Autosplitter pointers for main quests. Value starts at 1 before completing "Awakening", +1 when you complete a main quest. 
+// Autosplitter pointers for main quests. Value starts at 1 during "Awakening", +1 when you complete a main quest. 
 // Each game slot in the save file has a different pointer.
-// For future reference, the pointers should follow the pattern below. The only difference is a value of +8 in the 2nd to last offset.
-// Furthermore, the four addresses that are pointed to will always vary by a hex value of +588 from the last.
+// The four addresses that are pointed to will always vary by a hex value of +588 from the last.
 
-    int q1 : 0x0877AE48, 0x298, 0xC0, 0x20, 0x338, 0x0, 0x528; // save slot 1
-    int q2 : 0x0877AE48, 0x298, 0xC0, 0x20, 0x338, 0x8, 0x528; // save slot 2
-    int q3 : 0x0877AE48, 0x298, 0xC0, 0x20, 0x338, 0x10, 0x528; // save slot 3
-    int q4 : 0x0877AE48, 0x298, 0xC0, 0x20, 0x338, 0x18, 0x528; // save slot 4
-
-    /*
-    Pointers from game v1.02, for reference
-    int q1 : 0x08FD2FD8, 0x298, 0xC0, 0x20, 0x350, 0x528; // save slot 1
-    int q2 : 0x08FD2FD8, 0x298, 0xC0, 0x20, 0x358, 0x528; // save slot 2
-    int q3 : 0x08FD2FD8, 0x298, 0xC0, 0x20, 0x360, 0x528; // save slot 3
-    int q4 : 0x08FD2FD8, 0x298, 0xC0, 0x20, 0x368, 0x528; // save slot 4
-    */
+    int q1 : 0x0925F6A8, 0x80, 0xC0, 0x20, 0x330, 0x640; // save slot 1
+    int q2 : 0x0925F6A8, 0x80, 0xC0, 0x20, 0x330, 0xBC8; // save slot 2
+    int q3 : 0x0925F6A8, 0x80, 0xC0, 0x20, 0x330, 0x1150; // save slot 3
+    int q4 : 0x0925F6A8, 0x80, 0xC0, 0x20, 0x330, 0x16D8; // save slot 4
 }
 
 
