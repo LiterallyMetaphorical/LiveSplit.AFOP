@@ -1,13 +1,13 @@
 // Created by Binslev, Credit to Meta, Diggity and Sarentig
-// Game version 1.03 Ubisoft Connect (Untested on Epic Games)
-// Last updated 26-03-2024 (DD-MM-YYYY) by Binslev
+// Game version 1.1 Ubisoft Connect (Untested on Epic Games)
+// Last updated 19-10-2024 (DD-MM-YYYY) by Binslev
 
 state("afop")
 {
 // Load remover pointers. Double pointers as a failsafe. Value is 0 while loading, 1056964608 otherwise.
 
-    int loading1 : 0x8F7BC38;
-    int loading2 : 0x8F7BC7C;
+    int loading1 : 0x99D1938;
+    int loading2 : 0x99D19C0;
 
 // Autosplitter pointers for main quests. Value starts at 1 during "Awakening", +1 when you complete a main quest. 
 // Each game slot in the save file has a different pointer.
