@@ -1,13 +1,13 @@
 // Created by Binslev, Credit to Meta, Diggity and Sarentig
-// Game version 1.2 Ubisoft Connect (Untested on Epic Games)
-// Only load remover is updated. Autosplitter is WIP
-// Last updated 30-12-2024 (DD-MM-YYYY) by Binslev
+// Game version 1.4 Ubisoft Connect (Untested on Epic Games)
+// Only load remover is active. Autosplitter pointers are outdated.
+// Last updated 15-11-2025 (DD-MM-YYYY)
 
 state("afop")
 {
 // Load remover pointer. Value is 0 while loading, 1056964608 otherwise.
 
-    int loading1 : 0x9B505B4;
+    int loading1 : 0x9B72F98;
 
 // Autosplitter pointers for main quests. Value starts at 1 during "Awakening", +1 when you complete a main quest. 
 // Each game slot in the save file has a different pointer.
@@ -79,3 +79,4 @@ exit
 // Pause the timer if the game is closed.
 	timer.IsGameTimePaused = true;
 }
+
